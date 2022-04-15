@@ -17,61 +17,86 @@ app.use(
     extended: true,
   })
 );
+
+
 app.use(cors());
 
 let v = 1;
 app.get("/wallet/:id", (req, res) => {
-  console.log("I got request");
+  // console.log("I got request");
   const id = req.params.id;
-  console.log(id);
+  // console.log(id);
+
 
   axios(`https://public-api.solscan.io/account/tokens?account=${id}`)
     .then((resp) => {
-      // let num = (Number(res.data['0']['tokenAmount']['uiAmountString']));
-      // let a = [...walletBalance, num]
-      console.log(v, resp.data["0"]["tokenAmount"]["uiAmountString"]);
-      v++;
-      res.send(resp.data["0"]["tokenAmount"]["uiAmountString"]);
-      // setwalletBalance(a);
+      if (resp.data["0"]) {
+        // console.log(v, resp.data["0"]["tokenAmount"]["uiAmountString"]);
+        v++;
+        res.send(resp.data["0"]["tokenAmount"]["uiAmountString"]);
+      }
+      else {
+        res.send("0");
+      }
+
+
     })
     .catch((e) => {
       console.log(`Error calling ${e}`);
     });
 
-  // res.send("dummy data")
 });
 
+
+/*
+    -------------------------------------BTC FETCHING----------------------------------------
+*/
 app.get("/btc", (req, res) => {
   axios(`https://api.hitbtc.com/api/2/public/ticker/BTCUSD`)
     .then((resp) => {
-      console.log(resp.data.last);
+      // console.log(resp.data.last);
       res.send(resp.data.last);
+      console.log("SUCCESS ! ! !")
     })
     .catch((e) => {
       console.log(`Error calling ${e}`);
     });
 });
 
+
+/*
+    -------------------------------------ETH FETCHING----------------------------------------
+*/
 app.get("/eth", (req, res) => {
   axios(`https://api.hitbtc.com/api/2/public/ticker/ETHUSD`)
     .then((resp) => {
-      console.log(resp.data.last);
+      // console.log(resp.data.last);
       res.send(resp.data.last);
+      console.log("SUCCESS ! ! !")
     })
     .catch((e) => {
       console.log(`Error calling ${e}`);
     });
 });
+
+
+/*
+    -------------------------------------SOL FETCHING----------------------------------------
+*/
+
 app.get("/sol", (req, res) => {
   axios(`https://api.hitbtc.com/api/2/public/ticker/SOLUSD`)
     .then((resp) => {
-      console.log(resp.data.last);
+      // console.log(resp.data.last);
       res.send(resp.data.last);
+      console.log("SUCCESS ! ! !")
     })
     .catch((e) => {
       console.log(`Error calling ${e}`);
     });
 });
+
+
 app.listen(6020, () => {
   console.log("server file is running");
 });

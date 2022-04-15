@@ -7,11 +7,12 @@ function Usercard(props) {
             <div className='user-list w-full max-w-lg mx-auto bg-white rounded-xl shadow-xl flex flex-col py-4'>
                 <div className="user-row flex flex-col items-center justify-between cursor-pointer  p-4 duration-300 sm:flex-row sm:py-4 sm:px-8 hover:bg-[#f6f8f9]">
                     <div className="user flex items-center text-center flex-col sm:flex-row sm:text-left">
-                        <div className="avatar-content mb-2.5 sm:mb-0 sm:mr-2.5">
+                        <div className=" flex avatar-content mb-2.5 sm:mb-0 sm:mr-2.5">
+                            <h1>{props.position}</h1>
                             <img alt="img" className="avatar w-20 h-20 rounded-full" src="https://randomuser.me/api/portraits/men/32.jpg" />
                         </div>
                         <div className="user-body flex flex-col mb-4 sm:mb-0 sm:mr-4">
-                            <a href="#" className="title font-medium no-underline">{props.name}</a>
+                            <a href=" " className="title font-medium no-underline">{props.name}</a>
                             <div className="skills flex flex-col">
                                 <p className="subtitle text-slate-500">Bal: {props.walletbal}</p>
                             </div>

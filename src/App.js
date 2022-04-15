@@ -1,11 +1,17 @@
-import axios from 'axios';
-import { useEffect } from 'react';
-import LeaderBoard from './Components/LeaderBoard';
-import Navbar from './Components/Navbar';
-import QR from './Components/QR';
+import axios from "axios";
+// import { get } from "mongoose";
+import { useEffect, useState } from "react";
+import Conversion from "./Components/Conversion";
+import LeaderBoard from "./Components/LeaderBoard";
+import Navbar from "./Components/Navbar";
+import QR from "./Components/QR";
 
+let btc;
 
 function App() {
+  const [btc, setBTC] = useState("");
+  const [eth, setETH] = useState("");
+  const [sol, setSOL] = useState("");
   // ping working
   // axios.get('https://api.coingecko.com/api/v3/ping')
   // .then(res=>{
@@ -59,12 +65,43 @@ function App() {
   //   })
   // }
   //func()
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:6020/btc")
+      .then((res) => {
+        setBTC(res.data);
+      })
+      .catch((err) => {
+        console.log("Fail ");
+      });
+
+    axios
+      .get("http://localhost:6020/eth")
+      .then((res) => {
+        setETH(res.data);
+      })
+      .catch((err) => {
+        console.log("Fail ");
+      });
+
+    axios
+      .get("http://localhost:6020/sol")
+      .then((res) => {
+        setSOL(res.data);
+      })
+      .catch((err) => {
+        console.log("Fail ");
+      });
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
-        <Navbar/>
-        <LeaderBoard/>
-        <QR/>
+        <Navbar />
+        <LeaderBoard />
+        <QR />
+        <Conversion btc={btc} eth={eth} sol={sol} />
       </header>
     </div>
   );

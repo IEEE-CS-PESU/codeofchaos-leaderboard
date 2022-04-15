@@ -1,49 +1,77 @@
-import express from "express";
-import cors from "cors";
-import axios from "axios"
+const express = require("express");
+const cors = require("cors");
+const axios = require("axios");
 
-import https from 'https';
-import { rmSync } from "fs";
+// import https from 'https';
+// import { rmSync } from "fs";
 
 // var bodyParser=require("body-parser");
 // var express = require('express');
 var app = express();
 // var mongoose=require('mongoose');
 
-
-app.use(express.static('public'));
+app.use(express.static("public"));
 app.use(express.json());
-app.use(express.urlencoded({
-    extended: true
-}));
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
 app.use(cors());
 
-let v = 1
-app.get('/wallet/:id', (req, res) => {
+let v = 1;
+app.get("/wallet/:id", (req, res) => {
+  console.log("I got request");
+  const id = req.params.id;
+  console.log(id);
 
-    console.log("I got request");
-    const id = req.params.id;
-    console.log(id);
+  axios(`https://public-api.solscan.io/account/tokens?account=${id}`)
+    .then((resp) => {
+      // let num = (Number(res.data['0']['tokenAmount']['uiAmountString']));
+      // let a = [...walletBalance, num]
+      console.log(v, resp.data["0"]["tokenAmount"]["uiAmountString"]);
+      v++;
+      res.send(resp.data["0"]["tokenAmount"]["uiAmountString"]);
+      // setwalletBalance(a);
+    })
+    .catch((e) => {
+      console.log(`Error calling ${e}`);
+    });
 
-    axios(`https://public-api.solscan.io/account/tokens?account=${id}`)
-        .then(resp => {
+  // res.send("dummy data")
+});
 
-            // let num = (Number(res.data['0']['tokenAmount']['uiAmountString']));
-            // let a = [...walletBalance, num]
-            console.log(v, resp.data['0']['tokenAmount']['uiAmountString']);
-            v++;
-            res.send((resp.data['0']['tokenAmount']['uiAmountString']))
-            // setwalletBalance(a);
-        }).catch(e => {
-            console.log(`Error calling ${e}`)
-        })
+app.get("/btc", (req, res) => {
+  axios(`https://api.hitbtc.com/api/2/public/ticker/BTCUSD`)
+    .then((resp) => {
+      console.log(resp.data.last);
+      res.send(resp.data.last);
+    })
+    .catch((e) => {
+      console.log(`Error calling ${e}`);
+    });
+});
 
-    // res.send("dummy data")
-})
-
-
-
-
+app.get("/eth", (req, res) => {
+  axios(`https://api.hitbtc.com/api/2/public/ticker/ETHUSD`)
+    .then((resp) => {
+      console.log(resp.data.last);
+      res.send(resp.data.last);
+    })
+    .catch((e) => {
+      console.log(`Error calling ${e}`);
+    });
+});
+app.get("/sol", (req, res) => {
+  axios(`https://api.hitbtc.com/api/2/public/ticker/SOLUSD`)
+    .then((resp) => {
+      console.log(resp.data.last);
+      res.send(resp.data.last);
+    })
+    .catch((e) => {
+      console.log(`Error calling ${e}`);
+    });
+});
 app.listen(6020, () => {
-    console.log('server file is running');
+  console.log("server file is running");
 });

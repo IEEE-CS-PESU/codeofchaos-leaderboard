@@ -14,13 +14,13 @@ export default function QR() {
                         lg:text-[22px]
                         xl:text-xl
                         2xl:text-[22px]
-                        mb-4
                         hover:text-primary"
+                        
       >
         Scan QR Code to transfer CEROs!
       </h2>
       <br />
-      <div className="mx-auto flex justify-center">
+      <div className="mx-auto flex justify-center pb-10">
         <img src={img} alt="alt" className="h-48 w-48" />
       </div>
     </div>

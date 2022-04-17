@@ -23,9 +23,9 @@ export default function Conversion(props) {
     },
   };
   return (
-    <div id="conversion">
-      <span>
-        <section className="pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-[#F3F4F6]">
+    <div id="conversion" >
+      <span className="ml-100">
+        <section className="pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-[#F3F4F6] pl-[100px] w-screen">
           <div className="container">
             <div className="flex flex-wrap -mx-4">
               <div className="w-full md:w-1/2 xl:w-1/3 px-4">
@@ -49,6 +49,9 @@ export default function Conversion(props) {
                     >
                       BTC = {props.btc} USD
                     </h4>
+                    <h1>
+                      1 BTC = {parseFloat(0.5*props.btc).toFixed(5)} CERO
+                    </h1>
                   </div>
                 </div>
               </div>
@@ -72,6 +75,9 @@ export default function Conversion(props) {
                     >
                       1 ETH = {props.eth} USD
                     </h4>
+                    <h1>
+                      1 ETH = {parseFloat(0.3*props.eth).toFixed(5)} CERO
+                    </h1>
                   </div>
                 </div>
               </div>
@@ -99,6 +105,9 @@ export default function Conversion(props) {
                     >
                       1 SOL = {props.sol} USD
                     </h4>
+                    <h1>
+                      1 SOL = {parseFloat(0.6*props.sol).toFixed(5)} CERO
+                    </h1>
                   </div>
                 </div>
               </div>

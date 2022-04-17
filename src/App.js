@@ -6,12 +6,14 @@ import LeaderBoard from "./Components/LeaderBoard";
 import Navbar from "./Components/Navbar";
 import QR from "./Components/QR";
 
-let btc;
 
 function App() {
   const [btc, setBTC] = useState("");
   const [eth, setETH] = useState("");
   const [sol, setSOL] = useState("");
+
+
+
   // ping working
   // axios.get('https://api.coingecko.com/api/v3/ping')
   // .then(res=>{
@@ -67,6 +69,7 @@ function App() {
   //func()
 
   useEffect(() => {
+    console.log("Getting Prices");
     axios
       .get("http://localhost:6020/btc")
       .then((res) => {
@@ -102,6 +105,15 @@ function App() {
         <LeaderBoard />
         <QR />
         <Conversion btc={btc} eth={eth} sol={sol} />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-end",
+            padding: "30px",
+          }}
+        >
+        </div>
       </header>
     </div>
   );

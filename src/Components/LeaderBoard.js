@@ -225,8 +225,8 @@ const LeaderBoard = () => {
   //     console.log("hereeeeeeeeeeeeeeeeeeeeee", n[i]);
   //   }
   // };
-  const avatars = ["camel", "capybara", "chameleon"];
-  const colors = ["red", "blue", "green"];
+  const avatars = ["capybara", "chameleon", "camel", "panda"];
+  const colors = ["red", "blue", "green", "yellow"];
   return (
     <div>
       <div className="flex flex-col h-screen bg-slate-200">
@@ -237,8 +237,11 @@ const LeaderBoard = () => {
 
         <div className="leaderBoard flex justify-center align-center">
           <div className="container">
-            {/* To get top 5 : we will use slice() */}
-            {mapping(newTeams).slice(0, 5).map((item, key) => {
+            {/* To get top 5 : we will use slice() 
+            
+              .slice(0, 3) --> top 3
+            */}
+            {mapping(newTeams).map((item, key) => {
               return (
                 <Usercard
                   className=""

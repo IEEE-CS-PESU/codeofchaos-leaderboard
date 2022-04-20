@@ -69,7 +69,7 @@ function App() {
   //func()
 
   useEffect(() => {
-    console.log("Getting Prices");
+    // console.log("Getting Prices");
     axios
       .get("http://localhost:6020/btc")
       .then((res) => {

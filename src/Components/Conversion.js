@@ -5,7 +5,7 @@ import eth from "../lottie/36021-staking-on-ethereum.json";
 import sol from "../media/img/sol.png";
 
 export default function Conversion(props) {
-  console.log(props);
+  // console.log(props);
   const btcOptions = {
     loop: true,
     autoplay: true,

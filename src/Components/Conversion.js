@@ -25,10 +25,10 @@ export default function Conversion(props) {
   return (
     <div id="conversion" >
       <span className="ml-100">
-        <section className="pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-[#F3F4F6] pl-[100px] w-screen">
+        <section className="pt-[100px] pb-10  bg-[#F3F4F6]">
           <div className="container">
-            <div className="flex flex-wrap -mx-4">
-              <div className="w-full md:w-1/2 xl:w-1/3 px-4">
+            <div className="flex flex-wrap justify-center">
+              <div className="w-full md:w-1/2 xl:w-1/4 px-4">
                 <div className="bg-white rounded-lg overflow-hidden mb-10">
                   <Lottie options={btcOptions} height={150} width={150} />
 
@@ -50,12 +50,12 @@ export default function Conversion(props) {
                       BTC = {props.btc} USD
                     </h4>
                     <h1>
-                      1 BTC = {parseFloat(0.5*props.btc).toFixed(5)} CERO
+                      1 BTC = {parseFloat(0.5 * props.btc).toFixed(5)} CERO
                     </h1>
                   </div>
                 </div>
               </div>
-              <div className="w-full md:w-1/2 xl:w-1/3 px-4">
+              <div className="w-full md:w-1/2 xl:w-1/4 px-4">
                 <div className="bg-white rounded-lg overflow-hidden mb-10">
                   <Lottie options={ethOptions} height={150} width={150} />
                   <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
@@ -76,19 +76,19 @@ export default function Conversion(props) {
                       1 ETH = {props.eth} USD
                     </h4>
                     <h1>
-                      1 ETH = {parseFloat(0.3*props.eth).toFixed(5)} CERO
+                      1 ETH = {parseFloat(0.3 * props.eth).toFixed(5)} CERO
                     </h1>
                   </div>
                 </div>
               </div>
-              <div className="w-full md:w-1/2 xl:w-1/3 px-4">
+              <div className="md:w-1/2 xl:w-1/4">
                 <div className="bg-white rounded-lg overflow-hidden mb-10">
                   <img
                     src={sol}
                     alt="sol"
                     className="mx-auto flex justify-center w-28 h-28 my-5"
                   />
-                  <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                  <div className=" sm:p-9 text-center">
                     <h4
                       className="
                         font-semibold
@@ -106,7 +106,7 @@ export default function Conversion(props) {
                       1 SOL = {props.sol} USD
                     </h4>
                     <h1>
-                      1 SOL = {parseFloat(0.6*props.sol).toFixed(5)} CERO
+                      1 SOL = {parseFloat(0.6 * props.sol).toFixed(5)} CERO
                     </h1>
                   </div>
                 </div>

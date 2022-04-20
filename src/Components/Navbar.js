@@ -14,7 +14,7 @@ function Nav() {
 
               <div className="hidden lg:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                  
+
 
                   <a
                     href="#speakers"
@@ -36,7 +36,7 @@ function Nav() {
                   >
                     Scan QR Code
                   </a>
-                  
+
                 </div>
               </div>
             </div>
@@ -116,7 +116,7 @@ function Nav() {
                   href="#qr"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                 Scan QR Code
+                  Scan QR Code
                 </a>
               </div>
             </div>

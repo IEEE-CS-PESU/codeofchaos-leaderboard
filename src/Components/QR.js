@@ -15,7 +15,7 @@ export default function QR() {
                         xl:text-xl
                         2xl:text-[22px]
                         hover:text-primary"
-                        
+
       >
         Scan QR Code to transfer CEROs!
       </h2>

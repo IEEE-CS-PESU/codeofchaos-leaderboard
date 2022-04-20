@@ -103,7 +103,7 @@ function App() {
       <header className="App-header">
         <Navbar />
         <LeaderBoard />
-        <QR />
+
         <Conversion btc={btc} eth={eth} sol={sol} />
         <div
           style={{
@@ -113,6 +113,9 @@ function App() {
             padding: "30px",
           }}
         >
+          <footer>
+            <QR />
+          </footer>
         </div>
       </header>
     </div>

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Usercard from "./Usercard";
 // import teams from './data';
 
-let base = "https://public-api.solscan.io/account/tokens?account=";
+// let base = "https://public-api.solscan.io/account/tokens?account=";
 
 // const getDets = (teams) => {
 //     let finalTeams = []
@@ -26,45 +26,47 @@ let base = "https://public-api.solscan.io/account/tokens?account=";
 
 // function LeaderBoard() {
 const LeaderBoard = () => {
-  const [teamsFinal, setTeamsFinal] = useState({});
-  const [walletBalance, setwalletBalance] = useState([]);
+  // const [teamsFinal, setTeamsFinal] = useState({});
+  // const [walletBalance, setwalletBalance] = useState([]);
   let [teams, setTeams] = useState([
     {
       name: "hita",
       wallet_id: "GqE2mQvxfsxQyYZLWhtmzesLd5HN6Bbe3sHvoAV8tEmZ",
-      walletbal: 0,
-      image: "from_api",
+      walletbal: 0
     },
     {
       name: "veer",
       wallet_id: "DeEtABmXPH23E7RZ4AvMrn8riEDaxvd65VsowjWw7vV6",
-      walletbal: 0,
-      image: "from_api",
+      walletbal: 0
     },
     {
       name: "anirudh",
       wallet_id: "HMiwF6K3oD5sg9nCefNHsn4kgzCUkYd5dM216JSQbvtG",
-      walletbal: 0,
-      image: "from_api",
+      walletbal: 0
     },
+    {
+      name: "vaibhav",
+      wallet_id: "21zWG9TdcrP6FkVfsGcWqis2zcCUn7e9fnkoKjhUwP3a",
+      walletbal: 0
+
+    }
   ]);
 
   let [newTeams, setNewTeams] = useState({
     hita: {
       wallet_id: "GqE2mQvxfsxQyYZLWhtmzesLd5HN6Bbe3sHvoAV8tEmZ",
-      walletbal: 0,
-      image: "from_api",
+      walletbal: 0
     },
     veer: {
       wallet_id: "DeEtABmXPH23E7RZ4AvMrn8riEDaxvd65VsowjWw7vV6",
-      walletbal: 0,
-      image: "from_api",
+      walletbal: 0
     },
     anirudh: {
       wallet_id: "HMiwF6K3oD5sg9nCefNHsn4kgzCUkYd5dM216JSQbvtG",
-      walletbal: 0,
-      image: "from_api",
+      walletbal: 0
     },
+
+
   });
 
   // let n = teams.length;
@@ -211,18 +213,18 @@ const LeaderBoard = () => {
     // setTeamsFinal(newArr)
     return newArr;
   };
-  let newArrayTeams = [];
-  const iterator = (newTeams) => {
-    for (const key in newTeams) {
-      console.log(`${key}: ${newTeams[key]["walletbal"]}`);
-    }
-  };
+  // let newArrayTeams = [];
+  // const iterator = (newTeams) => {
+  //   for (const key in newTeams) {
+  //     console.log(`${key}: ${newTeams[key]["walletbal"]}`);
+  //   }
+  // };
 
-  const forLoop = (n) => {
-    for (let i = 0; i < n.length; i++) {
-      console.log("hereeeeeeeeeeeeeeeeeeeeee", n[i]);
-    }
-  };
+  // const forLoop = (n) => {
+  //   for (let i = 0; i < n.length; i++) {
+  //     console.log("hereeeeeeeeeeeeeeeeeeeeee", n[i]);
+  //   }
+  // };
   const avatars = ["camel", "capybara", "chameleon"];
   const colors = ["red", "blue", "green"];
   return (
@@ -235,7 +237,8 @@ const LeaderBoard = () => {
 
         <div className="leaderBoard flex justify-center align-center">
           <div className="container">
-            {mapping(newTeams).map((item, key) => {
+            {/* To get top 5 : we will use slice() */}
+            {mapping(newTeams).slice(0, 5).map((item, key) => {
               return (
                 <Usercard
                   className=""

@@ -13,12 +13,12 @@ function Usercard(props) {
     const myClass_3 = "subtitle text-" + props.textColor
     return (
 
-        <div className="user-list w-full max-w-md mx-auto shadow-xl flex flex-col my-4 ">
+        <div className="user-list px-10 md:w-full lg:w-full md:max-w-md mx-auto shadow-xl flex flex-col my-4  ">
             <div className="user-row" style={{ backgroundColor: props.bgColor, borderRadius: "12px" }}>
                 <div className={myClass_2}>
                     <div className=" flex avatar-content mb-3">
 
-                        <h1 className='mr-7 text-xl pt-6 center lg:align-middle'>{props.position})</h1>
+                        <h1 className='mr-7 text-xl pt-6 center lg:align-middle'>{props.position}. </h1>
 
 
                         <div className='py-3'>
@@ -31,7 +31,7 @@ function Usercard(props) {
                             <p className='font-semibold uppercase'>{props.name}</p>
 
 
-                            <p className={myClass_3}>Balance: {props.walletbal}</p>
+                            <p className={myClass_3}>Cero Balance: {props.walletbal}</p>
 
                         </div>
 

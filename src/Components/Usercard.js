@@ -19,9 +19,9 @@ function Usercard(props) {
                 fontWeight: "bold", color: props.textColor
             }}>
                 <div className={myClass_2}>
-                    <div className=" flex avatar-content mb-3">
+                    <div className=" flex avatar-content mb-3 px-4">
 
-                        <h1 className='mr-7 text-xl pt-6 center lg:align-middle'>{props.position}. </h1>
+                        <h1 className='mr-7 text-xl pt-6 center lg:align-middle '>{props.position}. </h1>
 
 
                         <div className='pt-2 flex align-center justify-center md:py-3'>
@@ -29,7 +29,7 @@ function Usercard(props) {
                         </div>
 
 
-                        <div className="gp_1 ml-20 pt-5">
+                        <div className="flex flex-col gp_1 ml-20 pt-5">
 
                             <p className='font-semibold uppercase'>{props.name}</p>
 

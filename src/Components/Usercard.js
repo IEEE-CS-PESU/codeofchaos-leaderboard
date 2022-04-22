@@ -13,7 +13,7 @@ function Usercard(props) {
     const myClass_3 = "subtitle text-" + props.textColor
     return (
 
-        <div className="user-list px-10 md:w-full lg:w-full md:max-w-md mx-auto shadow-xl flex flex-col my-4  ">
+        <div className="user-list px-10 md:px-0 md:w-full lg:w-full md:max-w-md mx-auto shadow-xl flex flex-col my-4  ">
             <div className="user-row" style={{ backgroundColor: props.bgColor, borderRadius: "12px" }}>
                 <div className={myClass_2}>
                     <div className=" flex avatar-content mb-3">

@@ -3,7 +3,7 @@ import img from "../media/img/qrcode.png";
 
 export default function QR() {
   return (
-    <div id="qr" className="my-10 bg-slate-800 pt-4  flex flex-col justify-center items-center w-[100vh]">
+    <div id="qr" className="my-10 bg-slate-800 pt-4  flex flex-col justify-center items-center w-full px-12 md:w-screen md:my-10 md:px-0">
       <br />
       <h2
         className="flex justify-center font-semibold

@@ -220,7 +220,7 @@ const LeaderBoard = () => {
   //   }
   // };
   const avatars = ["capybara", "chameleon", "camel", "panda", "coyote", "crow", "dingo", "dinosaur", "duck", "elephant", " ferret", "jackalope ", "kangaroo", "koala", "kraken", "leopard", "lemur", "liger", "loris", "manatee", "mink"];
-  const colors = ["blue", "yellow", "green", "red", "orange", "green", "purple", "teal"];
+  const colors = ["red", "blue", "orange", "red", "green", "purple", "teal"];
   return (
     <div>
       <div className="flex flex-col h-full bg-slate-200 pb-10">
@@ -251,13 +251,16 @@ const LeaderBoard = () => {
                     position={key + 1}
                     avatarName={avatars[key]}
                     color={colors[key]}
-                    bgColor={key <= 2 ? "black" : "white"}
+                    bgColor={key <= 2 ? " rgb(34 197 94)" : "white"}
                     textColor={key <= 2 ? "white" : "black"}
                   />
                 );
               })}
 
             {/*
+            rgb(74 222 128)
+             rgb(34 197 94)
+            
                              teams.map((item, key) => {
                                 return <Usercard name={item.name} walletbal={item.walletbal} key={key} />
                             }) 

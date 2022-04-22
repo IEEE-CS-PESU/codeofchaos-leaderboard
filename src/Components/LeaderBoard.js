@@ -101,7 +101,7 @@ const LeaderBoard = () => {
       // console.log(teams[index].wallet_id);
       axios({
         method: "get",
-        url: `http://localhost:6020/wallet/${teams[index].wallet_id}`,
+        url: `https://ieeecspesu.herokuapp.com/wallet/${teams[index].wallet_id}`,
       })
         .then(function (res) {
           let curr = teams[index];

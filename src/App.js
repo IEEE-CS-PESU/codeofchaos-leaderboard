@@ -72,7 +72,7 @@ function App() {
   useEffect(() => {
     // console.log("Getting Prices");
     axios
-      .get("http://localhost:6020/btc")
+      .get("https://ieeecspesu.herokuapp.com/btc")
       .then((res) => {
         setBTC(res.data);
       })
@@ -81,7 +81,7 @@ function App() {
       });
 
     axios
-      .get("http://localhost:6020/eth")
+      .get("https://ieeecspesu.herokuapp.com/eth")
       .then((res) => {
         setETH(res.data);
       })
@@ -90,7 +90,7 @@ function App() {
       });
 
     axios
-      .get("http://localhost:6020/sol")
+      .get("https://ieeecspesu.herokuapp.com/sol")
       .then((res) => {
         setSOL(res.data);
       })

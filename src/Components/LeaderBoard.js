@@ -49,6 +49,12 @@ const LeaderBoard = () => {
       wallet_id: "21zWG9TdcrP6FkVfsGcWqis2zcCUn7e9fnkoKjhUwP3a",
       walletbal: 0
 
+    },
+    {
+      name: "vaibhav1",
+      wallet_id: "21zWG9TdcrP6FkVfsGcWqis2zcCUn7e9fnkoKjhUwP3a",
+      walletbal: 0
+
     }
   ]);
 
@@ -125,6 +131,7 @@ const LeaderBoard = () => {
     // console.log("Object Values : ", Object.values(newTeams));
 
     //map these two
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // for (let index = 0; index < teams.length; index++) {
@@ -211,6 +218,7 @@ const LeaderBoard = () => {
     // console.log("NEw array : ", newArr);
     sortTeams(newArr);
     // setTeamsFinal(newArr)
+    console.log(newArr);
     return newArr;
   };
   // let newArrayTeams = [];
@@ -226,14 +234,17 @@ const LeaderBoard = () => {
   //   }
   // };
   const avatars = ["capybara", "chameleon", "camel", "panda"];
-  const colors = ["red", "blue", "green", "yellow"];
+  const colors = ["blue", "yellow", "green", "red"];
   return (
     <div>
-      <div className="flex flex-col h-screen bg-slate-200">
-        <h1 className=" animate-bounce mt-10 mb-8 text-center text-3xl sm:text-4xl font-black">
-          💫 LeaderBoard 💫
-          {/* <p className="day display: inline-block ">&nbsp;😎</p> */}
-        </h1>
+      <div className="flex flex-col h-full bg-slate-200 pb-10">
+        <div className="flex items-center justify-center">
+          <h1 className=" animate-bounce mt-10 mb-3 text-center text-[26px] font-bold uppercase md:text-[33px] lg:text-[37px]">
+            💫Code Of Chaos LeaderBoard💫
+            {/* <p className="day display: inline-block ">&nbsp;😎</p> */}
+          </h1>
+        </div>
+
 
         <div className="leaderBoard flex justify-center align-center">
           <div className="container">
@@ -241,19 +252,23 @@ const LeaderBoard = () => {
             
               .slice(0, 3) --> top 3
             */}
-            {mapping(newTeams).map((item, key) => {
-              return (
-                <Usercard
-                  className=""
-                  name={item.name}
-                  walletbal={item.walletbal}
-                  key={key}
-                  position={key + 1}
-                  avatarName={avatars[key]}
-                  color={colors[key]}
-                />
-              );
-            })}
+            {
+
+              mapping(newTeams).map((item, key) => {
+                return (
+                  <Usercard
+                    className=""
+                    name={item.name}
+                    walletbal={item.walletbal}
+                    key={key}
+                    position={key + 1}
+                    avatarName={avatars[key]}
+                    color={colors[key]}
+                    bgColor={key <= 2 ? "black" : "white"}
+                    textColor={key <= 2 ? "white" : "black"}
+                  />
+                );
+              })}
 
             {/*
                              teams.map((item, key) => {

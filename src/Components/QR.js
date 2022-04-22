@@ -3,7 +3,7 @@ import img from "../media/img/qrcode.png";
 
 export default function QR() {
   return (
-    <div id="qr" className="align-center my-8 bg-slate-900">
+    <div id="qr" className="my-10 bg-slate-800 pt-4  flex flex-col justify-center items-center w-[100vh]">
       <br />
       <h2
         className="flex justify-center font-semibold
@@ -17,10 +17,10 @@ export default function QR() {
                         hover:text-primary"
 
       >
-        Scan QR Code to transfer CEROs!
+        Scan QR Code to transfer CERO's!
       </h2>
       <br />
-      <div className="mx-auto flex justify-center pb-10">
+      <div className="flex justify-center pb-10">
         <img src={img} alt="alt" className="h-48 w-48" />
       </div>
     </div>

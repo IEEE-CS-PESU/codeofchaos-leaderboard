@@ -5,6 +5,7 @@ import Conversion from "./Components/Conversion";
 import LeaderBoard from "./Components/LeaderBoard";
 import Navbar from "./Components/Navbar";
 import QR from "./Components/QR";
+// import Test from "./Components/Test";
 
 
 function App() {
@@ -101,6 +102,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        {/* <Test /> */}
         <Navbar />
         <LeaderBoard />
 

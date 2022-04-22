@@ -6,6 +6,7 @@ import LeaderBoard from "./Components/LeaderBoard";
 // import Loading from "./Components/Loading";
 import Navbar from "./Components/Navbar";
 import QR from "./Components/QR";
+
 // import Test from "./Components/Test";
 
 
@@ -117,10 +118,10 @@ function App() {
             padding: "30px",
           }}
         >
-          {/* <Loading /> */}
           <footer>
             <QR />
           </footer>
+
         </div>
       </header>
     </div>

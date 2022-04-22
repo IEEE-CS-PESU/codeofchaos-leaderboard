@@ -241,21 +241,27 @@ const LeaderBoard = () => {
             {
 
               //loading thingy we have to do
-              !(newTeams) ? <Loading /> : mapping(newTeams).map((item, key) => {
-                return (
-                  <Usercard
-                    className=""
-                    name={item.name}
-                    walletbal={item.walletbal}
-                    key={key}
-                    position={key + 1}
-                    avatarName={avatars[key]}
-                    color={colors[key]}
-                    bgColor={key <= 2 ? " rgb(34 197 94)" : "white"}
-                    textColor={key <= 2 ? "white" : "black"}
-                  />
-                );
-              })}
+              newTeams // 👈 null and undefined check
+                && Object.keys(newTeams).length === 0 ?
+                <div className="loading flex justify-center items-center">
+                  <Loading />
+                </div>
+
+                : mapping(newTeams).map((item, key) => {
+                  return (
+                    <Usercard
+                      className=""
+                      name={item.name}
+                      walletbal={item.walletbal}
+                      key={key}
+                      position={key + 1}
+                      avatarName={avatars[key]}
+                      color={colors[key]}
+                      bgColor={key <= 2 ? " rgb(34 197 94)" : "white"}
+                      textColor={key <= 2 ? "white" : "black"}
+                    />
+                  );
+                })}
 
             {/*
             rgb(74 222 128)

@@ -3,9 +3,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Conversion from "./Components/Conversion";
 import LeaderBoard from "./Components/LeaderBoard";
+// import Loading from "./Components/Loading";
 import Navbar from "./Components/Navbar";
 import QR from "./Components/QR";
 // import Test from "./Components/Test";
+
 
 
 function App() {
@@ -115,6 +117,7 @@ function App() {
             padding: "30px",
           }}
         >
+          {/* <Loading /> */}
           <footer>
             <QR />
           </footer>

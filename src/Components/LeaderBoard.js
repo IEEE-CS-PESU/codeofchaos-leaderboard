@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import Usercard from "./Usercard";
+import Loading from "./Loading";
 // import teams from './data';
 
 // let base = "https://public-api.solscan.io/account/tokens?account=";
@@ -58,22 +59,7 @@ const LeaderBoard = () => {
     }
   ]);
 
-  let [newTeams, setNewTeams] = useState({
-    hita: {
-      wallet_id: "GqE2mQvxfsxQyYZLWhtmzesLd5HN6Bbe3sHvoAV8tEmZ",
-      walletbal: 0
-    },
-    veer: {
-      wallet_id: "DeEtABmXPH23E7RZ4AvMrn8riEDaxvd65VsowjWw7vV6",
-      walletbal: 0
-    },
-    anirudh: {
-      wallet_id: "HMiwF6K3oD5sg9nCefNHsn4kgzCUkYd5dM216JSQbvtG",
-      walletbal: 0
-    },
-
-
-  });
+  let [newTeams, setNewTeams] = useState({});
 
   // let n = teams.length;
 
@@ -218,7 +204,7 @@ const LeaderBoard = () => {
     // console.log("NEw array : ", newArr);
     sortTeams(newArr);
     // setTeamsFinal(newArr)
-    console.log(newArr);
+    // console.log(newArr);
     return newArr;
   };
   // let newArrayTeams = [];
@@ -233,8 +219,8 @@ const LeaderBoard = () => {
   //     console.log("hereeeeeeeeeeeeeeeeeeeeee", n[i]);
   //   }
   // };
-  const avatars = ["capybara", "chameleon", "camel", "panda"];
-  const colors = ["blue", "yellow", "green", "red"];
+  const avatars = ["capybara", "chameleon", "camel", "panda", "coyote", "crow", "dingo", "dinosaur", "duck", "elephant", " ferret", "jackalope ", "kangaroo", "koala", "kraken", "leopard", "lemur", "liger", "loris", "manatee", "mink"];
+  const colors = ["blue", "yellow", "green", "red", "orange", "green", "purple", "teal"];
   return (
     <div>
       <div className="flex flex-col h-full bg-slate-200 pb-10">
@@ -254,7 +240,8 @@ const LeaderBoard = () => {
             */}
             {
 
-              mapping(newTeams).map((item, key) => {
+              //loading thingy we have to do
+              !(newTeams) ? <Loading /> : mapping(newTeams).map((item, key) => {
                 return (
                   <Usercard
                     className=""

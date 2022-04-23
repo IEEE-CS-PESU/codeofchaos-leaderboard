@@ -54,7 +54,7 @@ export default function Conversion(props) {
                   BTC = {props.btc} USD
                 </h4>
                 <h1>
-                  1 BTC = {parseFloat(0.5 * props.btc).toFixed(5)} CERO
+                  15 CERO = 15 BTC
                 </h1>
               </div>
             </div>
@@ -83,7 +83,7 @@ export default function Conversion(props) {
                   1 ETH = {props.eth} USD
                 </h4>
                 <h1>
-                  1 ETH = {parseFloat(0.3 * props.eth).toFixed(5)} CERO
+                  10 CERO = 1 ETH
                 </h1>
               </div>
             </div>
@@ -113,7 +113,7 @@ export default function Conversion(props) {
                   1 SOL = {props.sol} USD
                 </h4>
                 <h1>
-                  1 SOL = {parseFloat(0.6 * props.sol).toFixed(5)} CERO
+                  5 CEROS = 1 SOL
                 </h1>
               </div>
             </div>

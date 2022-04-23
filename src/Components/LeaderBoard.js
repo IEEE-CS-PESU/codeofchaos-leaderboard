@@ -189,12 +189,12 @@ const LeaderBoard = () => {
       walletbal: 0
 
     },
-    // {
-    //   name: "0010",
-    //   wallet_id: "Co9i...tiHb",
-    //   walletbal: 0
+    {
+      name: "0010",
+      wallet_id: "Co9izCjB7E8XKv6jx59dFw9H9jPugfmpjWCkvfymtiHb",
+      walletbal: 0
 
-    // },
+    },
     {
       name: "Binary Beasts",
       wallet_id: "8jFiEvs8HCnzHivNZEsd4eSZV32g32eukHEFhd69zvHZ",
@@ -207,7 +207,7 @@ const LeaderBoard = () => {
       walletbal: 0
 
     },
-    
+
   ]);
 
   let [newTeams, setNewTeams] = useState({});

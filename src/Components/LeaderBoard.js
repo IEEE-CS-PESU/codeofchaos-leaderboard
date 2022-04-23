@@ -31,32 +31,183 @@ const LeaderBoard = () => {
   // const [walletBalance, setwalletBalance] = useState([]);
   let [teams, setTeams] = useState([
     {
-      name: "hita",
-      wallet_id: "GqE2mQvxfsxQyYZLWhtmzesLd5HN6Bbe3sHvoAV8tEmZ",
+      name: "Literally anything.",
+      wallet_id: "BVsCGrYRYwaK9RpPdpxJHUqsRJTTwdTEK4HRpbqJWmaN",
       walletbal: 0
     },
     {
-      name: "veer",
-      wallet_id: "DeEtABmXPH23E7RZ4AvMrn8riEDaxvd65VsowjWw7vV6",
+      name: "Aura",
+      wallet_id: "5NRQkj5WEc9EfSu74uz3gzuomVKr9dC7y6y6fnwZgyRc",
       walletbal: 0
     },
     {
-      name: "anirudh",
-      wallet_id: "HMiwF6K3oD5sg9nCefNHsn4kgzCUkYd5dM216JSQbvtG",
+      name: "blackhat juniors",
+      wallet_id: "2D5VtijAQRhoXZUj4SNe8Aw541rMBgR2wssbVoAC4TVP",
       walletbal: 0
     },
     {
-      name: "vaibhav",
-      wallet_id: "21zWG9TdcrP6FkVfsGcWqis2zcCUn7e9fnkoKjhUwP3a",
+      name: "Runtime Terrors",
+      wallet_id: "EciBW9mXGs4gHbh9N4aAfG931FEauU1cgfJoJ2wyHxbG",
       walletbal: 0
 
     },
     {
-      name: "vaibhav1",
-      wallet_id: "21zWG9TdcrP6FkVfsGcWqis2zcCUn7e9fnkoKjhUwP3a",
+      name: "Code pirates",
+      wallet_id: "29gc1BZrQmH1saBi6S9qfjTvLotnkExnk2JGWMaLKhwV",
       walletbal: 0
 
-    }
+    },
+    {
+      name: "Pythonic Lava",
+      wallet_id: "3h9FpZoRGfXoBecWtyidJVmWGXu6sSXxqpwwyBCAZUXq",
+      walletbal: 0
+
+    },
+    {
+      name: "Code pirates",
+      wallet_id: "29gc1BZrQmH1saBi6S9qfjTvLotnkExnk2JGWMaLKhwV",
+      walletbal: 0
+
+    },
+    {
+      name: "Under_dawgs",
+      wallet_id: "J57nEvTVhYkasLttz8VNp4AckcmvmLYbSVv5sRBXYZP4",
+      walletbal: 0
+
+    },
+    {
+      name: "It Takes Two",
+      wallet_id: "HHoxWLgYALMx2n9taH9UWxGc9yjaMGq1VgVSto45Yf9y",
+      walletbal: 0
+
+    },
+    {
+      name: "Team crackers",
+      wallet_id: "2qXUChoBbP29vyodWqLBryUUmweH5ozVyywEzvM12Xkh",
+      walletbal: 0
+
+    },
+    {
+      name: "Unibraincells",
+      wallet_id: "F6ZJL4VPa4Vc7q3ZDbfTMP7bZVzeK1A2AbvYxRgxQYMC",
+      walletbal: 0
+
+    },
+    {
+      name: "Inner Peace",
+      wallet_id: "5iknvDpLtGiBgqaRxL8SqReBPP16YqXRbyUQCr8ja5zT",
+      walletbal: 0
+
+    },
+    {
+      name: "Brogrammers",
+      wallet_id: "H9eMjcKFnyCdoFwHxrU4uXmjQYALbp4D5f3yj3rKypop",
+      walletbal: 0
+
+    },
+    {
+      name: "Code for chaos",
+      wallet_id: "ExgC1ExYJEaZyzoR2cvtWCJwY93Y1HtqAdfFdo8YmJDK",
+      walletbal: 0
+
+    },
+    {
+      name: "Boolean Tautology",
+      wallet_id: "8zTqGPCWehts45EQYn85qYg8KKkCZJFocyzZKh2TM4bn",
+      walletbal: 0
+
+    },
+    {
+      name: "Chaotic ones",
+      wallet_id: "DFK4Ns2ZfW6wT5ta8o4RPAdWRyXKEMjF1hNdPQoUc3Y3",
+      walletbal: 0
+
+    },
+    {
+      name: "Code pirates",
+      wallet_id: "29gc1BZrQmH1saBi6S9qfjTvLotnkExnk2JGWMaLKhwV",
+      walletbal: 0
+
+    },
+    {
+      name: "VVSC",
+      wallet_id: "AQzmPEZgkGw5JH8quem5wZGykVZdEoaBb8TGAfzxb6mu",
+      walletbal: 0
+
+    },
+    {
+      name: "Code pirates",
+      wallet_id: "29gc1BZrQmH1saBi6S9qfjTvLotnkExnk2JGWMaLKhwV",
+      walletbal: 0
+
+    },
+    {
+      name: "Neural API",
+      wallet_id: "7WhPwNSeuwyd6K9tM6wtdBDZjnSSGuUjBYR2MDUPHAVy",
+      walletbal: 0
+
+    },
+    {
+      name: "Knights",
+      wallet_id: "Ap7MZYb1SY9FfNSQneCwx2U6zHPPNpSv1maGTHu5SWYC",
+      walletbal: 0
+
+    },
+    {
+      name: "SuperMax",
+      wallet_id: "4BNGFqVYZH3mTaeh7rCeoC37vg8Tse68geoYePjjYAnh",
+      walletbal: 0
+
+    },
+    {
+      name: "The Blackhawks",
+      wallet_id: "2b1EYrTcWPKCFQAnaQRUGfYygXJL6B69nZcvTbmgZEsB",
+      walletbal: 0
+
+    },
+    {
+      name: "Egg bun sheesh",
+      wallet_id: "DdsBx1byVwtEMiR5HR4t4Nja5mpTQ6wSUgTa4cYyoc42",
+      walletbal: 0
+
+    },
+    {
+      name: "Yagerist",
+      wallet_id: "FBD2mzKNMeFXBSxmCzEBTwc7yNZhEiUk16uvvo8mudbr",
+      walletbal: 0
+
+    },
+    {
+      name: "Ekansh",
+      wallet_id: "F39T8EuU321FcqpEy5f9D24V5LdvrUghNpf2nBsMorEm",
+      walletbal: 0
+
+    },
+    {
+      name: "Bloxaflick",
+      wallet_id: "EDFYGaiD7R4Dy1E8L98eJtAa9oDXQfp3UAReHdaKfoiz",
+      walletbal: 0
+
+    },
+    // {
+    //   name: "0010",
+    //   wallet_id: "Co9i...tiHb",
+    //   walletbal: 0
+
+    // },
+    {
+      name: "Binary Beasts",
+      wallet_id: "8jFiEvs8HCnzHivNZEsd4eSZV32g32eukHEFhd69zvHZ",
+      walletbal: 0
+
+    },
+    {
+      name: "Team Debug",
+      wallet_id: "58Ec5jxsR4rg1yoVNx3MdYCumof4H16BCmAabKgBDs3e",
+      walletbal: 0
+
+    },
+    
   ]);
 
   let [newTeams, setNewTeams] = useState({});

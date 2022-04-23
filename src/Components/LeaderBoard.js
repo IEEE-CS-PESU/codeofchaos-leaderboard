@@ -370,7 +370,7 @@ const LeaderBoard = () => {
   //     console.log("hereeeeeeeeeeeeeeeeeeeeee", n[i]);
   //   }
   // };
-  const avatars = ["capybara", "chameleon", "camel", "panda", "coyote", "crow", "dingo", "dinosaur", "duck", "elephant", " ferret", "jackalope ", "kangaroo", "koala", "kraken", "leopard", "lemur", "liger", "loris", "manatee", "mink"];
+  const avatars = ["capybara", "chameleon", "camel", "panda", "coyote", "crow", "dingo", "dinosaur", "duck", "elephant", "ferret", "jackalope", "kangaroo", "koala", "kraken", "leopard", "lemur", "liger", "loris", "manatee", "mink"];
   const colors = ["red", "blue", "orange", "red", "green", "purple", "teal"];
   return (
     <div>

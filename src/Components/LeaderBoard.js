@@ -207,6 +207,12 @@ const LeaderBoard = () => {
       walletbal: 0
 
     },
+    {
+      name: "Tall Matrix",
+      wallet_id: "J8pa6seUrYkhXPkXJ8ULRehQzyUj7pwV8BkJW5saJH3E",
+      walletbal: 0
+
+    },
 
   ]);
 

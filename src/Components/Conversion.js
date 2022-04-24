@@ -54,7 +54,7 @@ export default function Conversion(props) {
                   BTC = {props.btc} USD
                 </h4>
                 <h1>
-                  15 CERO = 15 BTC
+                  15 CERO = 1 BTC
                 </h1>
               </div>
             </div>
